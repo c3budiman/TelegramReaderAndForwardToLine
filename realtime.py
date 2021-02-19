@@ -61,6 +61,8 @@ whitelist=[
     'U2b481aa1a6393cf608c7eba6ce95e4e5', #Handika
     'U66aa403f47e04f7e4e51f1057a0a32d8', #Yusuf
     'U291dcae373058be8bbd2a3a65ddfc516', #Ongki
+    'U01282d67760172f8114d628ba06aa559', #Sisil
+    'U5a18d4832136117f091fc55029e0d6a6', #Rafi Wardhana
 ]
 
 @client.on(events.NewMessage(chats=myChannelIDList))
