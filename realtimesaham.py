@@ -46,25 +46,16 @@ username = config['Telegram']['username']
 line_access_token = config['Telegram']['line_access_token']
 line_id = config['Telegram']['line_id']
 
+
 # Create the client and connect
 client = TelegramClient(username, api_id, api_hash)
-#1452507073 Group GW
-#1472431901 Group VIP
-#1322999920 Channel VIP IDX
-#1386278952 Channel VIP Binance
-# https://web.telegram.org/#/im?p=c_4258021522888417678
-# https://web.telegram.org/#/im?p=c_8003149890023288537
-myChannelIDList = [1162942921,1276435477,1352550900]
+#list of channel that you want to forward
+myChannelIDList = [1,2,3]
 line_bot_api = LineBotApi(line_access_token)
 handlerwebhook = WebhookHandler(line_id)
+#member that you want bot to forward the message to
 whitelist=[
     'Uc677eb17c2b1274731dd6cc559116b45', #cecep budiman
-    'Uedd4cfb6278f7e0b53947336b8e92630', #yaksa
-    'U2b481aa1a6393cf608c7eba6ce95e4e5', #Handika
-    'U66aa403f47e04f7e4e51f1057a0a32d8', #Yusuf
-    'U291dcae373058be8bbd2a3a65ddfc516', #Ongki
-    'U01282d67760172f8114d628ba06aa559', #Sisil
-    'U5a18d4832136117f091fc55029e0d6a6', #Rafi Wardhana
 ]
 
 @client.on(events.NewMessage(chats=myChannelIDList))
